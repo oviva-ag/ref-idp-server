@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "1e248ac0-ba2f-4a2e-8eef-c243658e80fb",
+		"name": "token-flow-PS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET openid-configuration",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GET idpSig/jwk.json",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GET idpEnc/jwk.json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8571/idpEnc/jwk.json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8571",
+					"path": [
+						"idpEnc",
+						"jwk.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET sign_response",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8571/sign_response?client_id=gematikTestPs&response_type=code&redirect_uri=http%3A%2F%2Ftest-ps.gematik.de%2Ferezept&state=fixUXNJyifgqgTPWFew4&code_challenge=IXL8FyDBAwFyp_ze6PhT5rsJvX-NrCxln6cKbiubLPI&code_challenge_method=S256&scope=e-rezept+openid&nonce=jWqsgpJnnW6E8O3HntMe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8571",
+					"path": [
+						"sign_response"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "gematikTestPs"
+						},
+						{
+							"key": "response_type",
+							"value": "code"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http%3A%2F%2Ftest-ps.gematik.de%2Ferezept"
+						},
+						{
+							"key": "state",
+							"value": "fixUXNJyifgqgTPWFew4"
+						},
+						{
+							"key": "code_challenge",
+							"value": "IXL8FyDBAwFyp_ze6PhT5rsJvX-NrCxln6cKbiubLPI"
+						},
+						{
+							"key": "code_challenge_method",
+							"value": "S256"
+						},
+						{
+							"key": "scope",
+							"value": "e-rezept+openid"
+						},
+						{
+							"key": "nonce",
+							"value": "jWqsgpJnnW6E8O3HntMe"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
