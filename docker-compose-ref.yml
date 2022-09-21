@@ -25,7 +25,8 @@ x-service-network: &service-network-ref
 services:
   # Database
   db:
-    image: mysql:8.0.22
+    #image: mysql:8.0.22
+    image: mariadb:10.8
     container_name: idp-mysql
     <<: *service-network-ref
     <<: *service-setup-ref
